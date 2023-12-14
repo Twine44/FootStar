@@ -1,0 +1,616 @@
+/* Style for all pages */
+
+/* Basic style */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #2C2E43;
+}
+
+body {
+    background-color: #2C2E43 !important;
+    font-family: 'Inter', sans-serif;
+    color: whitesmoke;
+    padding-top: 9vh;
+}
+
+::selection {
+    background-color: #0000003a;
+}
+
+a:link,
+a:active,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+/* Navbar */
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    height: 9vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* Adjusted width to 100% */
+    z-index: 10;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin: 0;
+    z-index: 10;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    color: #D88A16;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    margin-left: 40vw;
+}
+
+.burger div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+#logo {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+#logo img {
+    width: 40px;
+    height: auto;
+}
+
+/* Banner */
+.banner-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto;
+}
+
+.element-text {
+    margin-top: 22.59vh;
+    text-align: center;
+}
+
+.element-text h1 {
+    color: #D88A16;
+    font-size: calc(2vw + 2vh + 0.9vmin);
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.element-text p {
+    font-size: calc(1.5vw + 1.5vh + 1vmin);
+    color: rgb(224, 220, 220);
+    font-weight: 600;
+    line-height: 6.83vh;
+}
+
+/* Footer */
+footer {
+    margin-top: 400px;
+    height: 250px;
+    background-color: black;
+    display: flex !important;
+    justify-content: center;
+    gap: 100px;
+    text-align: center;
+}
+
+footer h1 {
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+footer p {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.social .fab {
+    display: inline-block;
+    color: white;
+}
+
+.social .fab:hover {
+    color: #ffa200;
+    transition: 0.5s ease;
+}
+
+.social a span {
+    height: 40px;
+    width: 40px;
+    background: #1a1a1a;
+    line-height: 40px;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+/* Style for index.php */
+/* Content */
+.lil-nas {
+    margin-top: 400px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto;
+}
+
+.lilnas-img {
+    width: 450px;
+    height: auto;
+}
+
+.shop {
+    margin-top: 400px;
+    display: grid;
+    gap: 70px;
+    grid-template-columns: auto auto;
+}
+
+.shop-img {
+    width: 550px;
+    border-radius: 10%;
+    height: auto;
+    margin-top: 110px;
+}
+
+.shop .element-text {
+    margin-top: 140px;
+}
+
+.shop .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+    grid-column: 1 / 3;
+    gap: 100px;
+    grid-template-columns: subgrid;
+}
+
+.buttons .bttn {
+    border: 2px solid #D88A16;
+    border-radius: 18px;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #D88A16;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.buttons .bttn:hover {
+    text-decoration: none;
+    background-color: #D88A16;
+    color: white;
+    transition: 0.2s ease-in;
+}
+
+/* Style for store.php */
+.card {
+    color: black;
+    margin-top: 30px;
+}
+
+.inner img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.shoestitle {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#filter img {
+    width: 40px;
+    height: auto;
+    border: 2px solid #D88A16;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#filter-options {
+    display: none;
+    align-items: center !important;
+    justify-content: center;
+    height: 150px;
+    transition: max-height 0.8s ease;
+}
+
+#filter-options label {
+    font-size: 18px;
+}
+
+#filter-options select,
+input {
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 30px;
+    width: 150px;
+}
+
+.filter-opened {
+    display: flex !important;
+}
+
+.icon-opened {
+    background-color: whitesmoke;
+    transition: 0.2s ease-in;
+}
+
+/* Style for item.php */
+#item {
+    height: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 60% 40%;
+    margin-top: 50px;
+}
+
+#item-content {
+    width: auto;
+}
+
+.btn-checked {
+    background-color: #D88A16 !important;
+    color: whitesmoke !important;
+}
+
+#item-content .buttons {
+    margin-top: 20px;
+}
+
+.sizebtns {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 50px;
+}
+
+#sizes {
+    display: flex;
+    flex-direction: row;
+}
+
+#item .wrapper {
+    height: auto;
+    overflow: hidden;
+    border-bottom: 10px solid transparent;
+}
+
+.wrapper img {
+    height: 100%;
+    width: 100%;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.wrapper img:hover {
+    transform: scale(1.6);
+}
+
+/* Style for about.php */
+#about-container {
+    display: flex;
+    justify-content: center;
+}
+
+#about-title {
+    text-align: right;
+    max-width: fit-content;
+    margin-top: 75px;
+    z-index: 2;
+}
+
+#about-title h1 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: calc(2vw + 2vh + 0.9vmin);
+}
+
+#yellow {
+    color: #D88A16;
+}
+
+#about-bottom-title {
+    margin-top: -35px;
+    letter-spacing: 7px;
+}
+
+#color-black {
+    color: black;
+}
+
+#about-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 60%;
+    border-radius: 50px 0 50px 0;
+    margin-top: 145px;
+    margin-left: -53px;
+    box-shadow: inset 0 0 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+#about-card img {
+    border-radius: 0 0 50px 0;
+    width: -webkit-fill-available;
+}
+
+#about-text {
+    padding: 40px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+#about-text #star {
+    color: #D88A16;
+    font-size: 23px;
+}
+
+#about-card h1,
+#about-card p {
+    color: black;
+}
+
+#about-card h1 {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* Media queries for different screens*/
+@media screen and (max-width:1600px) {
+    #about-card {
+        width: 90%;
+    }
+
+    #about-bottom-title {
+        margin-top: -20px;
+        letter-spacing: 0px;
+    }
+
+    #about-card {
+        margin-top: 190px;
+    }
+
+    #color-black {
+        color: white;
+    }
+}
+
+/* For medium size/tablet */
+@media screen and (max-width:1200px) {
+    .nav-links {
+        width: 60%;
+    }
+
+    .banner-img {
+        width: 600px;
+    }
+
+    .lil-nas .lilnas-img {
+        width: 350px;
+    }
+
+    .shop-img {
+        width: 300px;
+    }
+
+    #item {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    #item-images {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #filter-options {
+        width: 50%;
+        height: 425px;
+        flex-direction: column;
+    }
+
+    #filter-options select,
+    input {
+        width: 270px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* For mobile */
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden !important;
+    }
+
+    .banner-img {
+        width: 400px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .element-text {
+        margin-top: 25%;
+    }
+
+    .nav .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 9vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+    }
+
+    .nav .burger {
+        display: block;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .lil-nas .lilnas-img {
+        width: 250px;
+    }
+
+    .shop {
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shop-img {
+        width: 400px;
+        margin-top: 6px;
+    }
+
+    .inner img {
+        height: 320px;
+    }
+
+    .element-text p {
+        line-height: 40px;
+    }
+
+    .buttons .bttn {
+        font-size: 17px !important;
+    }
+
+    footer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    footer p {
+        font-size: 15px;
+    }
+
+    footer h1 {
+        font-size: 30px;
+    }
+
+    #about-title h1 {
+        font-size: 45px;
+    }
+
+    #about-card {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    #about-container {
+        flex-direction: column;
+    }
+    #filter-options {
+        height: 445px;
+    }
+    #button-container{
+        margin-left: 25px;
+    }
+
+}
+
+/* Navbar animations */
+
+/* Opened navbar */
+.nav-active {
+    transform: translateX(0%) !important;
+    transition: transform 0.5s ease-in;
+}
+
+/* Fading animation for the navbar links */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* Animation for the lines */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
