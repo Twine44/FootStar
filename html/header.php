@@ -17,11 +17,11 @@ $url.= $_SERVER['REQUEST_URI'];
         <a href="index.php" id="logo"><img src="images/logo.png" alt=""></a>
         <ul class="nav-links">
             <li><a href="index.php" <?php 
-            echo ($url=="http://localhost/footstar/index.php") ? 'id="yellow"' :  ""; ?>
+            echo ($url=="http://localhost/footstar/index.php" || $url=="http://localhost/footstar/") ? 'id="yellow"' :  ""; ?>
              >Home</a></li>
             <li><a href="store.php" <?php  
 
-            //Remove the itemID from the url to check if the User is on the Item site
+            //Remove the itemID from the url to check if the User is on the Item site, then he is inside the Store Page
             $lastPPosition = mb_strrpos($url, 'p');
             if ($lastPPosition !== false) {
                 $cutString = mb_substr($url, 0, $lastPPosition + 1);
